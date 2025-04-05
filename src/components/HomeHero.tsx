@@ -2,7 +2,8 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Search } from 'lucide-react';
+import { Search, Leaf, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HomeHero: React.FC = () => {
   const { language, t } = useLanguage();
@@ -33,10 +34,14 @@ const HomeHero: React.FC = () => {
             </p>
             
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
-              <Button className="bg-mitti hover:bg-mitti/90 text-cream w-full sm:w-auto">
-                {language === 'en' ? 'Explore Remedies' : 'नुस्खे देखें'}
-              </Button>
+              <Link to="/#categories">
+                <Button className="bg-mitti hover:bg-mitti/90 text-cream w-full sm:w-auto">
+                  <Leaf className="w-4 h-4 mr-2" />
+                  {language === 'en' ? 'Explore Remedies' : 'नुस्खे देखें'}
+                </Button>
+              </Link>
               <Button variant="outline" className="border-mitti text-mitti hover:bg-mitti/10 w-full sm:w-auto">
+                <Heart className="w-4 h-4 mr-2" />
                 {language === 'en' ? 'Submit Your Nuskha' : 'अपना नुस्खा भेजें'}
               </Button>
             </div>
@@ -64,7 +69,7 @@ const HomeHero: React.FC = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-tulsi/20 flex items-center justify-center overflow-hidden border-4 border-cream shadow-lg">
                 <img
-                  src="/placeholder.svg"
+                  src="/turmeric-milk.jpg"
                   alt="Traditional Remedies"
                   className="w-full h-full object-cover"
                 />
@@ -82,6 +87,12 @@ const HomeHero: React.FC = () => {
                 <div className="text-center font-handwritten">
                   <div className="text-xs">100%</div>
                   <div className="text-sm font-bold">Natural</div>
+                </div>
+              </div>
+
+              <div className="absolute bottom-10 right-0 bg-tulsi/80 text-white rounded-full h-14 w-14 flex items-center justify-center transform rotate-6 shadow-md">
+                <div className="text-center font-handwritten">
+                  <div className="text-xs">पारंपरिक</div>
                 </div>
               </div>
             </div>
