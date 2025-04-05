@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/categories" className="text-mitti/80 hover:text-spice transition-colors">
+                <Link to="/#categories" className="text-mitti/80 hover:text-spice transition-colors">
                   {language === 'en' ? 'Categories' : 'श्रेणियाँ'}
                 </Link>
               </li>
@@ -67,27 +67,27 @@ const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/category/health" className="text-mitti/80 hover:text-spice transition-colors">
+                <Link to="/#health" className="text-mitti/80 hover:text-spice transition-colors">
                   {language === 'en' ? 'Health' : 'स्वास्थ्य'}
                 </Link>
               </li>
               <li>
-                <Link to="/category/skin_hair" className="text-mitti/80 hover:text-spice transition-colors">
+                <Link to="/#skin_hair" className="text-mitti/80 hover:text-spice transition-colors">
                   {language === 'en' ? 'Skin & Hair' : 'त्वचा और बाल'}
                 </Link>
               </li>
               <li>
-                <Link to="/category/kitchen" className="text-mitti/80 hover:text-spice transition-colors">
+                <Link to="/#kitchen" className="text-mitti/80 hover:text-spice transition-colors">
                   {language === 'en' ? 'Kitchen Hacks' : 'रसोई के टिप्स'}
                 </Link>
               </li>
               <li>
-                <Link to="/category/baby_care" className="text-mitti/80 hover:text-spice transition-colors">
+                <Link to="/#baby_care" className="text-mitti/80 hover:text-spice transition-colors">
                   {language === 'en' ? 'Baby Care' : 'शिशु देखभाल'}
                 </Link>
               </li>
               <li>
-                <Link to="/category/seasonal" className="text-mitti/80 hover:text-spice transition-colors">
+                <Link to="/#seasonal" className="text-mitti/80 hover:text-spice transition-colors">
                   {language === 'en' ? 'Seasonal' : 'मौसमी'}
                 </Link>
               </li>

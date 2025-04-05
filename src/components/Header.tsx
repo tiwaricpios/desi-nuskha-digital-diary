@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
-import { Menu, X, Globe, Home, Leaf, Heart, Send } from 'lucide-react';
+import { Menu, X, Globe, Home, Leaf, Heart, Send, Book } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -49,6 +49,13 @@ const Header: React.FC = () => {
             >
               <Leaf className="w-4 h-4 mr-1" />
               {t('categories')}
+            </Link>
+            <Link
+              to="/daadi-diary"
+              className="text-mitti hover:text-spice px-3 py-2 rounded-md text-sm font-medium flex items-center"
+            >
+              <Book className="w-4 h-4 mr-1" />
+              {language === 'en' ? 'Daadi Ki Diary' : 'दादी की डायरी'}
             </Link>
             <Link
               to="/submit"
@@ -114,6 +121,16 @@ const Header: React.FC = () => {
               <div className="flex items-center">
                 <Leaf className="w-4 h-4 mr-2" />
                 {t('categories')}
+              </div>
+            </Link>
+            <Link
+              to="/daadi-diary"
+              className="text-mitti hover:text-spice block px-3 py-2 rounded-md text-base font-medium"
+              onClick={toggleMenu}
+            >
+              <div className="flex items-center">
+                <Book className="w-4 h-4 mr-2" />
+                {language === 'en' ? 'Daadi Ki Diary' : 'दादी की डायरी'}
               </div>
             </Link>
             <Link
