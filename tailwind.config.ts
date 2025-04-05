@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom Ghar Ka Nuskha colors
+				haldi: '#F3C969',  // Turmeric yellow
+				mitti: '#8D5B4C',  // Earth/mud brown
+				tulsi: '#6A8D73',  // Tulsi green
+				cream: '#F7F3E3',  // Vintage paper
+				spice: '#BC4749',  // Spicy accent color
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +91,33 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'diya-flicker': {
+					'0%, 100%': { 
+						opacity: '1',
+						filter: 'brightness(1)'
+					},
+					'50%': { 
+						opacity: '0.8',
+						filter: 'brightness(0.8)'
+					},
+					'75%': { 
+						opacity: '0.9',
+						filter: 'brightness(0.9)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'diya-flicker': 'diya-flicker 3s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'paper-texture': "url('/paper-texture.png')",
+			},
+			fontFamily: {
+				handwritten: ['Kalam', 'cursive'],
+				devnagari: ['Poppins', 'sans-serif'],
 			}
 		}
 	},
