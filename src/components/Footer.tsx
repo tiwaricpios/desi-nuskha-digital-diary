@@ -53,6 +53,16 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/daadi-kahaniyaan" className="text-mitti/80 hover:text-spice transition-colors">
+                  {language === 'en' ? 'Daadi Ki Kahaniyaan' : 'दादी की कहानियां'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-mitti/80 hover:text-spice transition-colors">
+                  {language === 'en' ? 'Blog' : 'ब्लॉग'}
+                </Link>
+              </li>
+              <li>
                 <Link to="/submit" className="text-mitti/80 hover:text-spice transition-colors">
                   {language === 'en' ? 'Submit Nuskha' : 'नुस्खा भेजें'}
                 </Link>

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
-import { Menu, X, Globe, Home, Leaf, Heart, Send, Book } from 'lucide-react';
+import { Menu, X, Globe, Home, Leaf, Heart, Send, Book, BookOpen, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -56,6 +56,20 @@ const Header: React.FC = () => {
             >
               <Book className="w-4 h-4 mr-1" />
               {language === 'en' ? 'Daadi Ki Diary' : 'दादी की डायरी'}
+            </Link>
+            <Link
+              to="/daadi-kahaniyaan"
+              className="text-mitti hover:text-spice px-3 py-2 rounded-md text-sm font-medium flex items-center"
+            >
+              <BookOpen className="w-4 h-4 mr-1" />
+              {language === 'en' ? 'Daadi Ki Kahaniyaan' : 'दादी की कहानियां'}
+            </Link>
+            <Link
+              to="/blog"
+              className="text-mitti hover:text-spice px-3 py-2 rounded-md text-sm font-medium flex items-center"
+            >
+              <FileText className="w-4 h-4 mr-1" />
+              {language === 'en' ? 'Blog' : 'ब्लॉग'}
             </Link>
             <Link
               to="/submit"
@@ -131,6 +145,26 @@ const Header: React.FC = () => {
               <div className="flex items-center">
                 <Book className="w-4 h-4 mr-2" />
                 {language === 'en' ? 'Daadi Ki Diary' : 'दादी की डायरी'}
+              </div>
+            </Link>
+            <Link
+              to="/daadi-kahaniyaan"
+              className="text-mitti hover:text-spice block px-3 py-2 rounded-md text-base font-medium"
+              onClick={toggleMenu}
+            >
+              <div className="flex items-center">
+                <BookOpen className="w-4 h-4 mr-2" />
+                {language === 'en' ? 'Daadi Ki Kahaniyaan' : 'दादी की कहानियां'}
+              </div>
+            </Link>
+            <Link
+              to="/blog"
+              className="text-mitti hover:text-spice block px-3 py-2 rounded-md text-base font-medium"
+              onClick={toggleMenu}
+            >
+              <div className="flex items-center">
+                <FileText className="w-4 h-4 mr-2" />
+                {language === 'en' ? 'Blog' : 'ब्लॉग'}
               </div>
             </Link>
             <Link
